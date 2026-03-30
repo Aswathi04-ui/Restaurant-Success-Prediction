@@ -126,10 +126,16 @@ jupyter notebook
 * Missing geographic data
 These will be handled during preprocessing and modeling.
 
-##  Success Metric
+##  Problem Understanding
+The goal of this project is to understand what makes a restaurant successful.
+I am trying to analyze how factors like price, location, reviews, and services (like online delivery or table booking) affect restaurant ratings.
+The idea is to use this data to identify patterns and later build a model that can predict restaurant success.
+## Success Metric
 Restaurant success is defined using:
 **Rating (Regression Problem)**
+* I am using Rating as the measure of success.
 * Continuous target variable
-* Higher rating , More successful restaurant
+* Higher rating → More successful restaurant
+Lower rating → Less successful restaurant
 
 
