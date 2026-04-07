@@ -20,84 +20,30 @@ Lower rating → Less successful restaurant
 * Visualizes market trends to identify success factors
 
 ##  Data Collection
-###  Zomato Web Scraping
-Restaurant data was collected using web scraping techniques.
-**Extracted Features:**
-* Name
-* Cuisine
-* Price
-* Rating
-* City & Area
-* Average Cost for Two
-* Online Delivery availability
-* Table Booking
-* Restaurant link
+# Zomato
+* Collected restaurant data using web scraping techniques
+* Extracted key features: Name, Cuisine, Price, Rating, Location, and Services
+* Scraped multiple cities focusing on high-traffic restaurant areas
+* Used BeautifulSoup and Requests for data extraction
+* Created features like hasOnlineDelivery and hasTableBooking
+* Parsed data using HTML structure and JSON-LD scripts
 
-**Tools Used:**
-* BeautifulSoup
-* Requests
-
-**Logic:**
-* Iterates through multiple cities (Bangalore, Mumbai, etc.)
-* Targets high-traffic restaurant areas
-
-**Feature Engineering:**
-* Created `hasOnlineDelivery` and `hasTableBooking`
-* Extracted using text parsing and JSON-LD scripts
-
-###   OpenStreetMap (OSM) Data
-**Tools Used:**
-* Overpass API
-* BallTree (Scikit-Learn)
-
-**Spatial Features:**
-* Latitude
-* Longitude
-
-**Competition Density:**
-* Calculated using Haversine distance
-* Counts number of restaurants within a 1 km radius
-
-###  Data Merging (Fuzzy Matching)
-**Challenge:**
-Zomato and OSM datasets often have naming differences
-(e.g., *"McDonald's"* vs *"McDonald's India"*).
-
-**Solution:**
-* Used RapidFuzz (token sort ratio = 85%)
-* Matched similar restaurant names across datasets
-
-##  Exploratory Data Analysis (EDA)
-
-###  Univariate Analysis
-* Distribution of Ratings
-* Price Distribution
-* Top Cuisines
-* Reviews Distribution
-* Restaurants per City
-###  Bivariate Analysis
-* Reviews vs Rating
-* Cost vs Rating
-* Online Delivery vs Rating
-* Table Booking vs Rating
-* Competition Density vs Rating
-
-##  Key Insights
-* Market is highly saturated with budget-friendly restaurants
-* Mid-range restaurants show strong growth potential
-* Online delivery has minimal impact on ratings
-* Table booking is positively correlated with higher ratings
-* High competition density affects the ability to maintain high ratings.
-
-# Feature Engineering & Preprocessing (Week 2)
-Created Price_bucket using pd.cut to group prices into meaningful categories
-Created location_tier using pd.qcut to represent market activity levels
-Handled multi-label Cuisine using MultiLabelBinarizer and reduced to top categories
-Applied ColumnTransformer:
-StandardScaler → numerical features
-OrdinalEncoder → ordered features
-OneHotEncoder → categorical features
-Performed train-test split before transformation to avoid data leakage
+# OpenStreetMap (OSM) & Data Merging
+* Used Overpass API to collect geographic data (latitude & longitude)
+* Applied BallTree to perform spatial analysis
+*Calculated competition density (restaurants within 1 km radius) using Haversine distance
+* Faced naming inconsistencies between datasets
+* Used RapidFuzz (token sort ratio = 85%) for fuzzy matching
+* Successfully merged Zomato and OSM data for enriched analysis
+# Feature Engineering & Preprocessing 
+* Created Price_bucket using pd.cut to group prices into meaningful categories
+* Created location_tier using pd.qcut to represent market activity levels
+* Handled multi-label Cuisine using MultiLabelBinarizer and reduced to top categories
+* Applied ColumnTransformer:
+* StandardScaler → numerical features
+* OrdinalEncoder → ordered features
+* OneHotEncoder → categorical features
+* Performed train-test split before transformation to avoid data leakage
 
 ##  Tech Stack
 
