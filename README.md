@@ -44,8 +44,24 @@ Lower rating → Less successful restaurant
 * OrdinalEncoder → ordered features
 * OneHotEncoder → categorical features
 * Performed train-test split before transformation to avoid data leakage
-
-##  Tech Stack
+## Model Selection
+*DecisionTree Regressor
+*Random Forest Regressor
+*XGBoost Regressor
+Best Model: XGBoost Regressor
+Chosen based on superior performance on evaluation metrics.
+## Evaluation Metrics
+Model performance was evaluated using:
+R² Score
+Mean Absolute Error (MAE)
+Root Mean Squared Error (RMSE)
+## Visualization
+A scatter plot of Actual vs Predicted values was used to evaluate model performance.
+Points close to the diagonal line indicate better predictions.
+## Feature Importance
+Feature importance analysis was performed using the XGBoost model to identify key factors influencing predictions.
+Top features include:
+# city,Area
 
 **Languages:**
 * Python
