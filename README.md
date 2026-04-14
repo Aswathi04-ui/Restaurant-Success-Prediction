@@ -45,9 +45,9 @@ Lower rating → Less successful restaurant
 * OneHotEncoder → categorical features
 * Performed train-test split before transformation to avoid data leakage
 ## Model Selection
-*DecisionTree Regressor
-*Random Forest Regressor
-*XGBoost Regressor
+* DecisionTree Regressor
+* Random Forest Regressor
+* XGBoost Regressor
 Best Model: XGBoost Regressor
 Chosen based on superior performance on evaluation metrics.
 ## Evaluation Metrics
