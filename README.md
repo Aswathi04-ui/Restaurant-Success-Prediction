@@ -62,6 +62,8 @@ Points close to the diagonal line indicate better predictions.
 Feature importance analysis was performed using the XGBoost model to identify key factors influencing predictions.
 Top features include:
 ### city,Area
+## Success Prediction APP
+A Flask-based web application that predicts restaurant ratings using a trained machine learning model. It also uses Generative AI to suggest improvements based on user inputs, helping businesses enhance performance and customer satisfaction.
 
 **Languages:**
 * Python
@@ -77,10 +79,6 @@ Top features include:
 **APIs:**
 * OpenStreetMap (Overpass API)
 
-##  Next Steps
-* Model Building (Regression & Classification)
-* Model Evaluation
-* Flask Deployment
 
 ##  Setup Instructions
 1. Clone the repository:
